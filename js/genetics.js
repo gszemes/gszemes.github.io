@@ -1,3 +1,17 @@
+/**
+ * 
+ * further dev ideas:
+ *(5 fenotype -> 5 genotype)
+ * - fenotypes -> genotypes improvement
+ *   size (0-5) -> greater bush range, but slower movement as growing in size
+ *   fast-paced (0-5) -> earlier mateage but shorter lifespan as more fast-paced
+ *   fat (0-5) -> greater stomach, but slower movement as more fat
+ *   picky (0-5) -> greater lifespan, but smaller stomach
+ *   the bunny gene (0-5) -> smaller bush range but earlier mateage
+ */
+
+
+
 genetics = {
     createNewRandomFenotype : () => {
         return [
@@ -9,6 +23,7 @@ genetics = {
             Math.random() * 30 + 5                    // bush reach range (5-15)
         ];                    
     },
+    //genoTypeFromFenoTpype : (fenoType)
     recombine :(dadFeno, mumFeno) => {
         var childFeno = [];
         for (var i=0; i<dadFeno.length; i++){
