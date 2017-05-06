@@ -8,12 +8,16 @@ geomath = {
         )
     },
     getXFromAngle : (angle) => {
-        return Math.cos(angle)
+        return Math.cos(geomath.degreeToRad(angle))
     },
     getYFromAngle : (angle) => {
-        return Math.sin(angle)
-    }    
+        return Math.sin(geomath.degreeToRad(angle))
+    },
+    degreeToRad : (degrees) =>  {
+        return degrees * Math.PI / 180;
+    }
 }
+    
 
 worldMath = {
     tickToYear : (tick) => {
