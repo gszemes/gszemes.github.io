@@ -27,7 +27,7 @@ infoDisplay = {
             "<b>speed:</b> " + inh.speed.toFixed(2) + "<br/>" +
             "<b>stomach:</b> " + inh.maxFullness.toFixed(2) + "<br/>" +
             "<b>min mate age:</b> " + inh.minimumMatingAge.toFixed(2) + "<br/>" +
-            "<b>bush range:</b> " + inh.minimumMatingAge.toFixed(2) + "<br/>" +
+            "<b>bush range:</b> " + inh.bushReachRange.toFixed(2) + "<br/>" +
             "<br/>" +       
             "<b>fullness:</b> " + inh.fullness.toFixed(2) + "<br/>" +
             "<b>conf (" + params.inhabReproducingConfidencyTreshold + "):</b> " + (inh.reproducingConfidency) + "<br/>" +

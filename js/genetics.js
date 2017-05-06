@@ -6,7 +6,7 @@ genetics = {
             Math.random() * 50 + 100,                 // maxFulnesss (50-150)
             Math.random() * 50 + 30,                  // lifeSpan (30-80 year)
             Math.random() * 5 + 12,                   // minimum mating age
-            Math.random() * 10 + 5                    // bush reach range (5-15)
+            Math.random() * 30 + 5                    // bush reach range (5-15)
         ];                    
     },
     recombine :(dadFeno, mumFeno) => {
