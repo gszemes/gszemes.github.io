@@ -20,8 +20,8 @@ function Inhabitant (id, x, y, angle, generation, firstName, familyName, fenoTyp
     this.x = x;
     this.y = y;
     this.angle = angle;
-    this.dx = this.speed * geomath.getXFromAngle(angle);
-    this.dy = this.speed * geomath.getYFromAngle(angle);
+    this.dx = this.speed * geomath.getXFromAngle(this.angle);
+    this.dy = this.speed * geomath.getYFromAngle(this.angle);
 
     // init states
     this.tickCount = 0;
@@ -36,7 +36,7 @@ function Inhabitant (id, x, y, angle, generation, firstName, familyName, fenoTyp
     // init dom
     this.dom = 
         "<div id='inhabitant_" + id + "' class='inhabitant " + this.gender + "' onclick='infoDisplay.displayInhab(" + id + ")'>" +
-        "   <div class='body'></div>"
+        "   <div class='body'></div>" +
         "   <div class='name'>" + this.firstName.charAt(0) + ". " + this.familyName + "</div>"
         "</div>";
 
@@ -161,7 +161,8 @@ function Inhabitant (id, x, y, angle, generation, firstName, familyName, fenoTyp
         return $("#inhabitant_" + this.id);
     }
     this.adjustDom = () => {
-        var inhJQ = this.getDomJQ();
+        var inhJQ = this.getDomJQ();        
+        inhJQ.find('.body').css("transform", "rotate(" + (this.angle) + "deg)");
         inhJQ.css("left", Math.floor(this.x+10) + "px");
         inhJQ.css("top", Math.floor(this.y+40) + "px");
         inhJQ.css("opacity", this.fullness/100);
