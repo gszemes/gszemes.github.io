@@ -40,8 +40,6 @@ function Inhabitant (id, x, y, angle, generation, firstName, familyName, fenoTyp
         "   <div class='name'>" + this.firstName.charAt(0) + ". " + this.familyName + "</div>"
         "</div>";
 
-    console.log(this)
-
     
     this.log = () => {
         console.log(this);
@@ -113,6 +111,7 @@ function Inhabitant (id, x, y, angle, generation, firstName, familyName, fenoTyp
                 if (this.gender === 'female') {
                     // GIVE BIRTH!!!!           
                     var fenoType = genetics.recombine(this.fenoType, this.matingPartner.fenoType);
+                    if (Math.random() < params.mutationPercentage / 100) genetics.mutateRandomGene(fenoType)
                     var gender = fenoType[0] === 0 ? 'male' : 'female';
                     var newBorn = new Inhabitant(
                         world.getMaxInhabId()+1,

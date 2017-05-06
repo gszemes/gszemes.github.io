@@ -19,7 +19,13 @@ genetics = {
             }
         }
         return childFeno;
-    }    
+    },
+    mutateRandomGene : (fenoType) => {
+        console.log("MUTATION!!!!")
+        var randFeno = genetics.createNewRandomFenotype();
+        var randIndex = Math.floor(Math.random()*randFeno.length);
+        fenoType[randIndex] = randFeno[randIndex];
+    },
 }
 
 

@@ -2,6 +2,8 @@ params = {
     schedulerSleepTime: 40,                             // ms 
     schedulerFastSleepTime: 1,                          // ms 
     
+    mutationPercentage: 30,
+    
     worldWidth : 340,
     worldHeight: 250,
     initInhabCount: 22,
