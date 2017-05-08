@@ -4,17 +4,15 @@ function Inhabitant (id, x, y, angle, generation, firstName, familyName, fenoTyp
     // set naming
     this.firstName = firstName;
     this.familyName = familyName;
-                
+    
     // apply genetics
     this.fenoType = fenoType;
-    var genoType = genetics.fenoTypeToGenoType(fenoType);
-    this.genoType = genoType;
-    this.gender = this.genoType.gender;
-    this.speed = this.genoType.speed;
-    this.maxFullness = this.genoType.fullStomach;
-    this.lifeSpan = this.genoType.lifeSpan;                                                // year
-    this.minimumMatingAge = this.genoType.ageToMate; 
-    this.bushReachRange = this.genoType.bushRange; 
+    this.gender = fenoType[0] === 0 ? 'male' : 'female';
+    this.speed = fenoType[1];
+    this.maxFullness = fenoType[2];
+    this.lifeSpan = fenoType[3];                                                // year
+    this.minimumMatingAge = fenoType[4]; 
+    this.bushReachRange = fenoType[5]; 
     this.generation = generation;
     this.descendentCounter = 0;    
 

@@ -1,29 +1,45 @@
 /**
  * 
- * further dev ideas:
- *(5 fenotype -> 5 genotype)
- * - fenotypes -> genotypes improvement
- *   size (0-5) -> greater bush range, but slower movement as growing in size
- *   fast-paced (0-5) -> earlier mateage but shorter lifespan as more fast-paced
- *   fat (0-5) -> greater stomach, but slower movement as more fat
- *   picky (0-5) -> greater lifespan, but smaller stomach
- *   the bunny gene (0-5) -> smaller bush range but earlier mateage
+ * 5 fenotype -> 5 genotype
+ *   gender -> gender
+ *   size (0.25-1.75) -> greater bush range, but slower movement as growing in size
+ *   fast-paced (0.25-1.75) -> earlier mateage but shorter lifespan as more fast-paced
+ *   fat (0.25-1.75) -> greater stomach, but slower movement as more fat
+ *   picky (0.25-1.75) -> greater lifespan, but smaller stomach
+ *   the bunny gene (0.25-1.75) -> smaller bush range but earlier mateage
+ *   (note: displaying fenotypes: we will scale them to 0-6)
  */
 
-
-
 genetics = {
+    fenoTypeDescriptions : [
+        "gender: siply male and female (no offense, tho)",
+        "greater bush range, but slower movement as growing in size",
+        "fast-paced: earlier mateage but shorter lifespan as more fast-paced",
+        "fat: greater stomach, but slower movement as more fat",
+        "picky: greater lifespan, but smaller stomach",
+        "the bunny gene: smaller bush range but earlier mateage",
+    ],
     createNewRandomFenotype : () => {
         return [
-            Math.floor(Math.random() * 2),            // gender (0,1)            
-            Math.random() * 2 + 3.0,                  // speed (2-5)
-            Math.random() * 50 + 100,                 // maxFulnesss (50-150)
-            Math.random() * 50 + 30,                  // lifeSpan (30-80 year)
-            Math.random() * 5 + 12,                   // minimum mating age
-            Math.random() * 30 + 5                    // bush reach range (5-15)
+            Math.floor(Math.random() * 2),           s// gender (0,1)            
+            Math.random() * 1.5 + 0.25,              // size (0.25-1.75)
+            Math.random() * 1.5 + 0.25 ,             // fast-paced (0.25-1.75)
+            Math.random() * 1.5 + 0.25,              // fat (0.25-1.75)
+            Math.random() * 1.5 + 0.25,              // picky (0.25-1.75)
+            Math.random() * 1.5 + 0.25               // the bunny gene (0.25-1.75)
         ];                    
     },
-    //genoTypeFromFenoTpype : (fenoType)
+    fenoTypeToGenoType : (fenoType) => {
+        return {
+            gender: fenoType[0] === 0 ? 'male' : 'female',
+            speed: params.inhabSpeedAvg / fenoType[1] / fenoType[3],             
+            fullStomach: params.inhabFullStomachAvg * fenoType[3] * fenoType[4],        
+            bushRange: params.inhabBushRangeAvg * fenoType[1] / fenoType[5],
+            lifeSpan: params.inhabLifeSpanAvg / fenoType[2] * fenoType[4],
+            ageToMate: params.inhabAgeToMateAvg / fenoType[2] / fenoType[5]
+            
+        }
+    },
     recombine :(dadFeno, mumFeno) => {
         var childFeno = [];
         for (var i=0; i<dadFeno.length; i++){
