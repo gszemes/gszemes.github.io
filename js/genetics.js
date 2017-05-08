@@ -21,7 +21,7 @@ genetics = {
     ],
     createNewRandomFenotype : () => {
         return [
-            Math.floor(Math.random() * 2),           s// gender (0,1)            
+            Math.floor(Math.random() * 2),           // gender (0,1)            
             Math.random() * 1.5 + 0.25,              // size (0.25-1.75)
             Math.random() * 1.5 + 0.25 ,             // fast-paced (0.25-1.75)
             Math.random() * 1.5 + 0.25,              // fat (0.25-1.75)
