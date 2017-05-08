@@ -28,8 +28,8 @@ params = {
    
     // inhab genetics average values
     inhabSpeedAvg: 3,                                  // px / step    
-    inhabFullStomachAvg: 150,                          // cal
-    inhabBushRangeAvg: 20,                             // px    
+    inhabFullStomachAvg: 120,                          // cal
+    inhabBushRangeAvg: 15,                             // px    
     inhabLifeSpanAvg: 50,                              // years
     inhabAgeToMateAvg: 20,                             // year
    
