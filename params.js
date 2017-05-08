@@ -7,7 +7,7 @@ params = {
     // world init params
     worldWidth : 340,
     worldHeight: 250,
-    initInhabCount: 22,
+    initInhabCount: 30,
     bushDensity: 0.3,                                   // qty / kiloPixel
     inhabStartingLocation: 'random',                    // 'central', 'random'    
             
