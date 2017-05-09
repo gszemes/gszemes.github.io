@@ -70,7 +70,7 @@ function Inhabitant (id, x, y, angle, generation, firstName, familyName, fenoTyp
             // in range of a full bush? and hungry?
             for (var i=0; i<world.bushes.length; i++){
                 var b = world.bushes[i];                
-                if (geomath.distance(this, b) < this.bushReachRange && this.fullness < this.maxFullness - params.bushNutrition && b.regrowTimer == 0){
+                if (geomath.distance(this, b) < this.bushReachRange && this.fullness < this.maxFullness * 0.8 && b.regrowTimer == 0){
                     //console.log("!!")
                     this.state = 'eating';
                     this.eatWait = b.nutrition * params.inhabitantEatTimePerNutrition;
@@ -95,7 +95,7 @@ function Inhabitant (id, x, y, angle, generation, firstName, familyName, fenoTyp
             }                        
         } else if (this.state == 'eating') {      
             if (this.eatWait == 0) {
-                this.fullness += this.eatBush.nutrition;
+                this.fullness = Math.max(this.fullness + this.eatBush.nutrition, this.maxFullness);
                 this.eatBush.removeBerries();
                 this.state = 'wandering'
                 //console.log("inhabitant " + this.id + " has eaten bush " + this.eatBush.id)
