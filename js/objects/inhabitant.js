@@ -103,7 +103,7 @@ function Inhabitant (id, x, y, angle, generation, firstName, familyName, fenoTyp
             }                        
         } else if (this.state == 'eating') {      
             if (this.eatWait == 0) {
-                this.fullness = Math.max(this.fullness + this.eatBush.nutrition, this.maxFullness);
+                this.fullness = Math.min(this.fullness + this.eatBush.nutrition, this.maxFullness);
                 this.eatBush.removeBerries();
                 this.state = 'wandering'
                 //console.log("inhabitant " + this.id + " has eaten bush " + this.eatBush.id)
