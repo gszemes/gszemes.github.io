@@ -15,6 +15,7 @@ function Inhabitant (id, x, y, angle, generation, firstName, familyName, fenoTyp
     this.lifeSpan = this.genoType.lifeSpan;                                                // year
     this.minimumMatingAge = this.genoType.ageToMate; 
     this.bushReachRange = this.genoType.bushRange; 
+    this.turnPeriod = this.genoType.turnPeriod;
     this.generation = generation;
     this.descendentCounter = 0;    
 
@@ -50,7 +51,7 @@ function Inhabitant (id, x, y, angle, generation, firstName, familyName, fenoTyp
         this.tickCount++;
         
         // DIE of old age
-        if (worldMath.tickToYear(this.tickCount) > this.lifeSpan) this.die();
+        if (worldMath.tickToYear(this.tickCount) > this.lifeSpan) this.die();                
         
         if (this.fullness > this.maxFullness * params.inhabReproducingConfidencyIncreaseRatio && worldMath.tickToYear(this.tickCount) >= this.minimumMatingAge) {
             this.reproducingConfidency++;
@@ -63,6 +64,13 @@ function Inhabitant (id, x, y, angle, generation, firstName, familyName, fenoTyp
         }
         
         if (this.state == 'wandering') {            
+            
+            if (this.tickCount % this.turnPeriod == 0){
+                this.angle += Math.random() * 50 - 25; 
+                this.dx = this.speed * geomath.getXFromAngle(this.angle);
+                this.dy = this.speed * geomath.getYFromAngle(this.angle);
+            }
+            
             this.x += this.dx;
             this.y += this.dy;            
             this.fullness -= params.inhabitantFullnessReductionPerStep;

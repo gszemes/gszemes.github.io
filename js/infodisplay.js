@@ -34,6 +34,7 @@ infoDisplay = {
             "<b>stomach:</b> " + inh.maxFullness.toFixed(2) + " (" + Math.floor(inh.maxFullness / params.inhabFullStomachAvg * 100) + "%) <br/>" +
             "<b>mate age:</b> " + inh.minimumMatingAge.toFixed(2) + " (" + Math.floor(inh.minimumMatingAge / params.inhabAgeToMateAvg * 100) + "%) <br/>" +
             "<b>bush range:</b> " + inh.bushReachRange.toFixed(2) + " (" + Math.floor(inh.bushReachRange / params.inhabBushRangeAvg * 100) + "%) <br/>" +
+            "<b>turn period:</b> " + inh.turnPeriod + " <br/>" +
             "<br/>" +       
             "<b>fullness:</b> " + inh.fullness.toFixed(2) + "<br/>" +
             "<b>conf (" + params.inhabReproducingConfidencyTreshold + "):</b> " + (inh.reproducingConfidency) + "<br/>" +

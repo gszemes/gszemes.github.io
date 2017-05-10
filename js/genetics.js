@@ -26,7 +26,8 @@ genetics = {
             Math.random() * 1.5 + 0.5 ,             // fast-paced (0.5-2)
             Math.random() * 1.5 + 0.5,              // fat (0.5-2)
             Math.random() * 1.5 + 0.5,              // picky (0.5-2)
-            Math.random() * 1.5 + 0.5               // the bunny gene (0.5-2)
+            Math.random() * 1.5 + 0.5,              // the bunny gene (0.5-2)
+            Math.random() * 30                      // change direction in every (0-10)*10 turns
         ];                    
     },
     fenoTypeToGenoType : (fenoType) => {
@@ -36,8 +37,8 @@ genetics = {
             fullStomach: params.inhabFullStomachAvg * fenoType[3] / fenoType[4],        
             bushRange: params.inhabBushRangeAvg * fenoType[1] / fenoType[5],
             lifeSpan: params.inhabLifeSpanAvg / fenoType[2] * fenoType[4],
-            ageToMate: params.inhabAgeToMateAvg / fenoType[2] / fenoType[5]
-            
+            ageToMate: params.inhabAgeToMateAvg / fenoType[2] / fenoType[5],            
+            turnPeriod: Math.floor(fenoType[6])
         }
     },
     recombine :(dadFeno, mumFeno) => {
