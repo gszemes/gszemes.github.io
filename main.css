@@ -60,6 +60,10 @@ div {
     border: 2px solid red;
     border-radius: 8px;
 }
+.inhabitant.selected2{
+    border: 2px solid blue;
+    border-radius: 8px;
+}
 .inhabitant .body{
     width: 5px;
     height: 7px;

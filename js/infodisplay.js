@@ -5,11 +5,25 @@ infoDisplay = {
         infoDisplay.screenJQ = screenJQ;   
     },
     inhabOnDisplay : null,
+    selectedInhabCount : 0,
+    player1selectTurn: true,
     displayInhab : (inhId) => {
         infoDisplay.screenJQ.css("display", "block");
         infoDisplay.inhabOnDisplay = world.getInhabById(inhId);
-        $(".inhabitant").removeClass("selected");
-        infoDisplay.inhabOnDisplay.getDomJQ().addClass("selected");
+        if (infoDisplay.selectedInhabCount == 0) {
+            $(".inhabitant").removeClass("selected");
+            infoDisplay.inhabOnDisplay.getDomJQ().addClass("selected");
+            infoDisplay.selectedInhabCount = 1;
+        } else if (infoDisplay.selectedInhabCount == 1) {
+            if (infoDisplay.player1selectTurn){
+                $(".inhabitant").removeClass("selected");
+                infoDisplay.inhabOnDisplay.getDomJQ().addClass("selected");
+            } else {
+                $(".inhabitant").removeClass("selected2");
+                infoDisplay.inhabOnDisplay.getDomJQ().addClass("selected2");
+            }
+            infoDisplay.player1selectTurn = !infoDisplay.player1selectTurn;
+        }
         infoDisplay.updateInhabDisplay();
     },    
     updateInhabDisplay() {        
