@@ -48,11 +48,17 @@ div {
 
 
 .inhabitant {
-    position: absolute;    
+    position: absolute;
     margin-left: -1px;
     margin-top: -1px;
     cursor: pointer;
     z-index: 2000;
+    width: 6px;
+    height: 6px;
+}
+.inhabitant.selected{
+    border: 2px solid red;
+    border-radius: 8px;
 }
 .inhabitant .body{
     width: 5px;

@@ -8,6 +8,8 @@ infoDisplay = {
     displayInhab : (inhId) => {
         infoDisplay.screenJQ.css("display", "block");
         infoDisplay.inhabOnDisplay = world.getInhabById(inhId);
+        $(".inhabitant").removeClass("selected");
+        infoDisplay.inhabOnDisplay.getDomJQ().addClass("selected");
         infoDisplay.updateInhabDisplay();
     },    
     updateInhabDisplay() {        
