@@ -5,10 +5,10 @@ params = {
     mutationPercentage: 30,
     
     // world init params
-    worldWidth : 340,
-    worldHeight: 250,
-    initInhabCount: 30,
-    bushDensity: 0.3,                                   // qty / kiloPixel
+    worldWidth : 525,
+    worldHeight: 390,
+    initInhabCount: 45,
+    bushDensity: 0.4,                                   // qty / kiloPixel
     inhabStartingLocation: 'random',                    // 'central', 'random'    
             
     
@@ -30,8 +30,8 @@ params = {
     inhabSpeedAvg: 2,                                  // px / step    
     inhabFullStomachAvg: 150,                          // cal
     inhabBushRangeAvg: 15,                             // px    
-    inhabLifeSpanAvg: 60,                              // years
-    inhabAgeToMateAvg: 18,                             // year
+    inhabLifeSpanAvg: 72,                              // years
+    inhabAgeToMateAvg: 15,                             // year
    
    
         
