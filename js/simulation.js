@@ -40,6 +40,20 @@ simulation = {
         $('.control-btn.stop').css('display', 'none');
         simulation.running = false;
         clearTimeout(simulation.scheduler);
+    },
+    screenState : 'screen', // or 'familyTree'
+    toggleScreen : () => {
+        if (simulation.screenState == 'screen'){
+            simulation.screenState = 'familyTree';
+            $('.toggle-screen-btn').html('S');
+            $('.screen').css('display', 'none');
+            $('.family-tree').css('display', 'block');
+        } else {            
+            simulation.screenState = 'screen';
+            $('.toggle-screen-btn').html('T');
+            $('.family-tree').css('display', 'none');
+            $('.screen').css('display', 'block');            
+        }
     }
 }
 

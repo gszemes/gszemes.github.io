@@ -38,12 +38,14 @@ div {
 .content{
     
 }
-.content .screen{
-    background: #dbffcd;
+.content .screen, .content .family-tree{    
     width: 525px;
-    height: 390px;
-    background-image: url("pics/world.png");
+    height: 390px;    
     z-index: 2;
+    float: left;
+}
+.content .screen{
+    background-image: url("pics/world.png");
 }
 
 
@@ -142,11 +144,6 @@ div {
     font-weight: bold;    
 }
 
-
-.screen {
-    float: left;
-}
-
 .info {
     display: none;
     width: 145px;
@@ -201,4 +198,23 @@ div {
     width: 5px;
     background-color: green;
     z-index: 10000;
+}
+
+.toggle-screen-btn{
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 3px;
+    width: 30px;
+    height: 28px;
+    top: 375px;
+    z-index: 3000;
+    left: 478px;
+    background: white;
+    padding-left: 11px;
+    padding-top: 12px;
+    cursor: pointer;
+}
+
+.family-tree{
+    
 }
