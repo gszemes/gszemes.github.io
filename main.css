@@ -40,8 +40,8 @@ div {
 }
 .content .screen{
     background: #dbffcd;
-    width: 350px;
-    height: 260px;
+    width: 525px;
+    height: 390px;
     background-image: url("pics/world.png");
     z-index: 2;
 }
@@ -190,8 +190,8 @@ div {
     position: absolute;
     z-index: 1000;
     background-image: url(pics/frame.png);
-    width: 351px;
-    height: 261px;
+    width: 525px;
+    height: 390px;
 }
 
 .avg-lifespan-bar{
