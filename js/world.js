@@ -19,6 +19,7 @@ world = {
             var name = world.getInitialInhabitantName(gender);
             var inh = new Inhabitant(i,x,y, Math.random()*365, 1, name.firstName, name.familyName, fenoType);            
             world.addInhab(inh);
+            familyTree.addInhab(inh, null, null)
         }
         $(".population-counter").html(world.inhabitants.length);
         var bushCount = params.bushDensity * world.width * world.height / 1000;

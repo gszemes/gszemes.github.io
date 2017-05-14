@@ -49,11 +49,13 @@ simulation = {
             $('.toggle-screen-btn').removeClass('tree');
             $('.screen').css('display', 'none');
             $('.family-tree').css('display', 'block');
+            $('.family-tree-canvas').css('display', 'block');
         } else {            
             simulation.screenState = 'screen';
             $('.toggle-screen-btn').addClass('tree');
             $('.toggle-screen-btn').removeClass('sim');
             $('.family-tree').css('display', 'none');
+            $('.family-tree-canvas').css('display', 'none');
             $('.screen').css('display', 'block');            
         }
     }

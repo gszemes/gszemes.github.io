@@ -133,7 +133,8 @@ function Inhabitant (id, x, y, angle, generation, firstName, familyName, fenoTyp
                         this.matingPartner.familyName,               // name from father
                         fenoType        
                     );
-                    world.addInhab(newBorn);                  
+                    world.addInhab(newBorn);    
+                    familyTree.addInhab(newBorn, this, this.matingPartner);
                 }                
             }
         }

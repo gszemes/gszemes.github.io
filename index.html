@@ -19,8 +19,10 @@ and open the template in the editor.
         <script type="text/javascript" src="js/genetics.js"></script>
         <script type="text/javascript" src="js/world.js"></script>
         <script type="text/javascript" src="js/simulation.js"></script>
+        <script type="text/javascript" src="js/objects/familyTreeInhabitant.js"></script>
         <script type="text/javascript" src="js/objects/inhabitant.js"></script>
         <script type="text/javascript" src="js/objects/bush.js"></script>
+        <script type="text/javascript" src="js/familyTree.js"></script>
         <script type="text/javascript" src="js/infodisplay.js"></script>
         <script type="text/javascript">
             $(window).load(() => {                
@@ -28,11 +30,14 @@ and open the template in the editor.
                 //$('.screen').width(world.width);
                 //$('.screen').height(world.height);
                 
+                familyTree.init($('.family-tree'), "ftcanvas");
+                
                 // init simulation (e.g. place inhabitants)
                 simulation.init($('.screen'));
                 //simulation.start();
                 
                 infoDisplay.init($('.info'));
+                
             });
         </script>
     </head>
@@ -50,7 +55,9 @@ and open the template in the editor.
             </div>
             <div class="screen">
             </div>
-            <div class="family-tree" style="display: none">
+            <canvas id="ftcanvas" class="family-tree-canvas" style="display: none">                
+            </canvas>
+            <div class="family-tree" style="display: none">                
             </div>
             <div class="info">
             </div>

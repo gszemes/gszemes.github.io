@@ -7,8 +7,8 @@ params = {
     // world init params
     worldWidth : 525,
     worldHeight: 390,
-    initInhabCount: 45,
-    bushDensity: 0.4,                                   // qty / kiloPixel
+    initInhabCount: 30,
+    bushDensity: 0.2,                                   // qty / kiloPixel
     inhabStartingLocation: 'random',                    // 'central', 'random'    
             
     
@@ -31,7 +31,7 @@ params = {
     inhabFullStomachAvg: 150,                          // cal
     inhabBushRangeAvg: 15,                             // px    
     inhabLifeSpanAvg: 72,                              // years
-    inhabAgeToMateAvg: 15,                             // year
+    inhabAgeToMateAvg: 2,                             // year
    
    
         
