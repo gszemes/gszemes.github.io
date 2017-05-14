@@ -45,12 +45,14 @@ simulation = {
     toggleScreen : () => {
         if (simulation.screenState == 'screen'){
             simulation.screenState = 'familyTree';
-            $('.toggle-screen-btn').html('S');
+            $('.toggle-screen-btn').addClass('sim');
+            $('.toggle-screen-btn').removeClass('tree');
             $('.screen').css('display', 'none');
             $('.family-tree').css('display', 'block');
         } else {            
             simulation.screenState = 'screen';
-            $('.toggle-screen-btn').html('T');
+            $('.toggle-screen-btn').addClass('tree');
+            $('.toggle-screen-btn').removeClass('sim');
             $('.family-tree').css('display', 'none');
             $('.screen').css('display', 'block');            
         }

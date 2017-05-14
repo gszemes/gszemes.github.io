@@ -201,15 +201,22 @@ div {
     position: absolute;
     border: 2px solid black;
     border-radius: 3px;
-    width: 30px;
-    height: 28px;
-    top: 375px;
+    width: 34px;
+    height: 33px;
+    top: 370px;
     z-index: 3000;
-    left: 478px;
+    left: 474px;
     background: white;
     padding-left: 11px;
     padding-top: 12px;
     cursor: pointer;
+}
+
+.toggle-screen-btn.tree{
+    background-image: url(pics/treebut.png);
+}
+.toggle-screen-btn.sim{
+    background-image: url(pics/simbut.png);
 }
 
 .family-tree{
