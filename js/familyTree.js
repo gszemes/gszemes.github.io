@@ -11,8 +11,9 @@ var familyTree = {
         familyTree.canvasContext = canvas.getContext("2d");
     },
     addInhab : (self, father, mother) => {
-        if (self.generation > 6) return;
-        var x = Math.random()*(world.width-familyTree.offsetX/2)+familyTree.offsetX;
+        if (self.generation > 6) return;        
+        var x = Math.random()*(world.width-150+75)+familyTree.offsetX;
+        if (mother != null) x = Math.random()*40-20+mother.ftInhabitant.x+familyTree.offsetX;        
         var y = familyTree.offsetY+(self.generation-1)*80;
         var ftInhab = new familyTreeInhabitant(self, father, mother, x, y);         
         familyTree.jq.append(ftInhab.dom);        

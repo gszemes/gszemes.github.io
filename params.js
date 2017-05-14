@@ -31,7 +31,7 @@ params = {
     inhabFullStomachAvg: 150,                          // cal
     inhabBushRangeAvg: 15,                             // px    
     inhabLifeSpanAvg: 72,                              // years
-    inhabAgeToMateAvg: 2,                             // year
+    inhabAgeToMateAvg: 16,                             // year
    
    
         
