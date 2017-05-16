@@ -30,7 +30,7 @@ params = {
     inhabSpeedAvg: 2,                                  // px / step    
     inhabFullStomachAvg: 150,                          // cal
     inhabBushRangeAvg: 15,                             // px    
-    inhabLifeSpanAvg: 72,                              // years
+    inhabLifeSpanAvg: 2,                              // years
     inhabAgeToMateAvg: 16,                             // year
    
    

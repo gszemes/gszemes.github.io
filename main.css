@@ -81,6 +81,10 @@ div {
 .inhabitant.male.active .body{
     background-image: url("pics/m2.png");
 }
+.inhabitant.dead .body{
+    background-image: url(pics/ghost.png) !important;
+}
+
 
 .inhabitant.opaque {
     position: absolute;

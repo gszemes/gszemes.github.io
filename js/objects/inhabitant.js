@@ -1,5 +1,6 @@
 function Inhabitant (id, x, y, angle, generation, firstName, familyName, fenoType) {
     this.id = id;    
+    this.dead = false;
 
     // set naming
     this.firstName = firstName;
@@ -159,12 +160,15 @@ function Inhabitant (id, x, y, angle, generation, firstName, familyName, fenoTyp
     
     this.die = () => {
         var i = world.inhabitants.indexOf(this);
-        this.fullness = 0;
+        this.fullness = 100;
+        //this.angle = 0;
+        this.getDomJQ().addClass('dead');
         this.adjustDom();
+        this.dead = true;
         // if (world.screenJQ.find(this.getDomJQ()).length) $("#screen").remove(this.getDomJQ());
-        if (i > -1) {
+        /*if (i > -1) {
             world.inhabitants.splice(i, 1);
-        }           
+        }*/          
     }
     
     this.getDomJQ = () => {

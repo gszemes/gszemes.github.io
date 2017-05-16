@@ -12,7 +12,7 @@ var familyTree = {
     },
     addInhab : (self, father, mother) => {
         if (self.generation > 6) return;        
-        var x = Math.random()*(world.width-150+75)+familyTree.offsetX;
+        var x = Math.random()*(world.width-150+90)+familyTree.offsetX;
         if (mother != null) x = Math.random()*40-20+mother.ftInhabitant.x+familyTree.offsetX;        
         var y = familyTree.offsetY+(self.generation-1)*80;
         var ftInhab = new familyTreeInhabitant(self, father, mother, x, y);         

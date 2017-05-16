@@ -37,6 +37,7 @@ world = {
         var avgLifeSpan = 0;
         for (var i=0; i<world.inhabitants.length; i++){
             var inh = world.inhabitants[i];
+            if (inh.dead) continue;
             inh.step();
             inh.adjustDom();
             avgLifeSpan += inh.lifeSpan / world.inhabitants.length;
