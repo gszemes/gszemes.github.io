@@ -157,7 +157,7 @@ div {
     line-height: 10px;
     background-image: url(pics/stats.png);
     z-index: 0;
-    padding-top: 22px;
+    padding-top: 19px;
     padding-left: 20px;
     color: white;
 }
@@ -166,7 +166,6 @@ div {
 }
 .info .name{
     color: white;
-    text-decoration: underline;
 }
 .ico {
     position: absolute;

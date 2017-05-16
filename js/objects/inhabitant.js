@@ -164,6 +164,7 @@ function Inhabitant (id, x, y, angle, generation, firstName, familyName, fenoTyp
         //this.angle = 0;
         this.getDomJQ().addClass('dead');
         this.adjustDom();
+        this.state = "dead"
         this.dead = true;
         // if (world.screenJQ.find(this.getDomJQ()).length) $("#screen").remove(this.getDomJQ());
         /*if (i > -1) {

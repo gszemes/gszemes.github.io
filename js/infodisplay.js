@@ -36,7 +36,7 @@ infoDisplay = {
         var htmlString =
             genderDiv + 
             "<b class='name " +  inh.gender + "'>" + inh.firstName + " " + inh.familyName + "</b><br/>" +
-            "<br/>" +
+            "<i> " + inh.state + "</i><br/>" +
             "<br/>" +
             "<b>age:</b> " + worldMath.tickToYear(inh.tickCount).toFixed(2) + "<br/>" +
             "<b>generation:</b> " + inh.generation + "<br/>" +
