@@ -2,6 +2,7 @@ world = {
     width : params.worldWidth,  //px
     height : params.worldHeight, //px  
     inhabitants : [],
+    deadCount: 0,
     bushes :  [],
     screenJQ : null,
     init : (screenJQ) => {       
@@ -48,7 +49,7 @@ world = {
             var bus = world.bushes[i];
             bus.step();
         }
-        $(".population-counter").html(world.inhabitants.length);
+        $(".population-counter").html(world.inhabitants.length-world.deadCount);
     },
     reset : () => {
         world.inhabitants = [];    
