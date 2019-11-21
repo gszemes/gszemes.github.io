@@ -1,4 +1,4 @@
-# Survive Bitch!
+# Survive Little Ones!
 
 Watch your pixel bros take over the pixel bushes!
 
